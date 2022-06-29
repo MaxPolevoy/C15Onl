@@ -10,10 +10,7 @@ public class ClassTest {
 
     public static void main(String[] args) {
 
-
-        Point point = new Point(2,2);
-        Point2 point2 = new Point2(3,3);
-
+        Point point1 = new Point(3,2);
 
     }
 

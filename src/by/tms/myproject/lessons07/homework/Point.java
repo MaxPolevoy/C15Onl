@@ -9,33 +9,25 @@ package by.tms.myproject.lessons07.homework;
 */
 public class Point {
 
-    private double x1;
-    private double y1;
+    private double x;
+    private double y;
 
-    public Point(int x1, int y1) {
-        this.x1 = x1;
-        this.y1 = y1;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public double distance(double x1, double y1, Point2 x2, Point y2) {
-        double distance1 = Math.sqrt(Math.pow(x2.getX() - x1, 2) + Math.pow(y2.getY() - y1, 2));
-        return distance1;
+    public void distance(Point point2) {
+        point2 = new Point(10, 10);
+        double distance1 = Math.sqrt(Math.pow(point2.getX() - x, 2) + Math.pow(point2.getY() - y, 2));
     }
 
 
     public double getX() {
-        return x1;
+        return x;
     }
 
     public double getY() {
-        return y1;
-    }
-
-    public void setX(double x1) {
-        this.x1 = x1;
-    }
-
-    public void setY(double y1) {
-        this.y1 = y1;
+        return y;
     }
 }
