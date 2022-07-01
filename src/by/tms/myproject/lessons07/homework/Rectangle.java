@@ -13,43 +13,31 @@ package by.tms.myproject.lessons07.homework;
 
 public class Rectangle {
 
-    private Point point1;
-    private Point point2;
+    private Point leftUpperPosition;
+    private Point rightUpperPosition;
 
     public Rectangle() {
-
     }
 
-    public Rectangle(Point point1, Point point2) {
-        this.point1 = point1;
-        this.point2 = point2;
+    public Rectangle(Point leftUpperPosition, Point rightUpperPosition) {
+        this.leftUpperPosition = leftUpperPosition;
+        this.rightUpperPosition = rightUpperPosition;
     }
 
-    // Площадь прямоугольника S=a*b*c*d
+    // Площадь прямоугольника S=a*b
     public double rectangularArea() {
-        return (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2))) *
-                (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2))) *
-                (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2))) *
-                (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2)));
-    }
+        return Math.abs((rightUpperPosition.getX() - leftUpperPosition.getX()) * (rightUpperPosition.getY() - leftUpperPosition.getY()));
+    } // находим длинну сторон и перемножаем по модулю.
 
-    // Периметр прямоугольника S=a+b+c+d
+    // Периметр прямоугольника S=a+b+c+d,
     public double rectanglePerimeter() {
-        return (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2))) +
-                (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2))) +
-                (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2))) +
-                (Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2)));
+        return (Math.abs(rightUpperPosition.getX() - leftUpperPosition.getX()) + Math.abs(rightUpperPosition.getY() - leftUpperPosition.getY())) * 2;
     }
 
     // Диагональ прямоугольника diagonal=√2*S
-    public double diagonalLength1() {
-
+    public double diagonalRectangle() {
         return Math.sqrt(2 * rectangularArea());
     }
 
-    // Диагональ прямоугольника diagon=√(x1-x2)²+(y1-y2)²
-    public double diagonalLength2() {
-
-        return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point2.getY(), 2));
-    }
+    // ???? можно записать диагональ через вызов метода distance класса Point?
 }

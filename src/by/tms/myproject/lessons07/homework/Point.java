@@ -12,16 +12,19 @@ public class Point {
     private double x;
     private double y;
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public void distance(Point point2) {
-        point2 = new Point(10, 10);
-        double distance1 = Math.sqrt(Math.pow(point2.getX() - x, 2) + Math.pow(point2.getY() - y, 2));
-    }
+    //     как лучше записывать? point2.x или point2.getX() ?
 
+    public double distance(Point point2) {
+        return Math.sqrt(Math.pow(point2.getX() - x, 2) + Math.pow(point2.getY() - y, 2));
+    }
+//        public double distance(Point point2) {
+//        return Math.sqrt(Math.pow(point2.x - x, 2) + Math.pow(point2.y - y, 2));
+//    }
 
     public double getX() {
         return x;
@@ -30,4 +33,5 @@ public class Point {
     public double getY() {
         return y;
     }
+
 }
