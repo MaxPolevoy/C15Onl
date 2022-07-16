@@ -56,7 +56,7 @@ public final class ExceptionUtils {
 // Создать метод случайным образом выбрасывающий одно из 3-х исключений. Исключения выбрать самому.
 // Вызвать этот метод в блоке try-catch, отлавливающем каждое из 3-х по отдельности.
 
-    public static void methodThrowExceptions() throws RuntimeException {
+    public static void methodThrowExceptions(){
         int i = -1;
         if (i < 18)
             throw new RuntimeException("Запрет на допуск");
