@@ -1,6 +1,6 @@
 package by.tms.myproject.lessons15.homework.task02.car;
 
-import by.tms.myproject.lessons15.collection.Human;
+
 
 import java.util.*;
 

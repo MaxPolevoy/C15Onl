@@ -1,7 +1,7 @@
 package by.tms.myproject.lessons17.homework;
 
 
-import by.tms.myproject.lessons16.Actor;
+
 
 import java.util.*;
 import java.util.function.Function;
